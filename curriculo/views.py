@@ -1,5 +1,5 @@
-from django.test import Client
-from django.urls import reverse
+
+from django.shortcuts import render
 
 
 def index(request):
@@ -12,7 +12,4 @@ def index(request):
     # print(cursos)
     # print(type(cursos))
 
-    client = Client(HTTP_HOST="www.example-a.dev")
-    view = reverse("index")
-    response = client.get(view)
-    request.assertEqual(response.status_code, 200)
+    return render(request, 'curriculo/index.html')
