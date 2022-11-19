@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-(m0fa(4rjtuuwm!ns4m&ot_%+eg@ku!r$_6b=4ag9q($a2!8md
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['3.130.175.107', 'www.facal.dev']
+ALLOWED_HOSTS = ['*', 'www.facal.dev']
 
 
 # Application definition
@@ -41,7 +41,6 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'curriculo.virtualhostmiddleware.VirtualHostMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
